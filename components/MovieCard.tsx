@@ -33,7 +33,7 @@ const MovieCard = ({
         <View className="flex-row items-center justify-start gap-x-1">
           <Image source={icons.star} className="size-4" />
           <Text className="text-xs text-white font-bold uppercase">
-            {vote_average.toFixed(1)} | {vote_count}
+            {vote_average?.toFixed(1)} | {vote_count}
           </Text>
         </View>
         <View className="flex-row items-center justify-between">
