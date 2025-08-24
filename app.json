@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "mobile_movie_app",
+    "name": "Movie App",
     "slug": "mobile_movie_app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -44,6 +44,12 @@
       "eas": {
         "projectId": "4e77c8cb-34bc-4e0e-9f3c-2079327842e0"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/4e77c8cb-34bc-4e0e-9f3c-2079327842e0"
     }
   }
 }
