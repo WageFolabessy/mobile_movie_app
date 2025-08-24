@@ -60,18 +60,21 @@ export default function Index() {
     data: trendingMovie,
     loading: trendingLoading,
     error: trendingError,
+    refetch: refetchTrendingMovies,
   } = useFetch(getTrendingMovies);
+
   const {
     data: movies,
     loading: moviesLoading,
     error: moviesError,
     refetch: refetchMovies,
   } = useFetch(() => fetchMovies({ query: "" }));
+
   const [refreshing, setRefreshing] = useState(false);
 
   const onRefresh = async () => {
     setRefreshing(true);
-    await refetchMovies();
+    await Promise.all([refetchMovies(), refetchTrendingMovies()]);
     setRefreshing(false);
   };
 
